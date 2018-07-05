@@ -1,25 +1,27 @@
-CC=g++
+CXX=g++
 STD= -std=c++14
-CFLAGS= -c -Wall -Wextra -Werror -Wpedantic -g
-OBJ= Circle.o Rectangle.o Shape.o Square.o main.o
+CXXFLAGS= -c -Wall -Wextra -Werror -Wpedantic -g
+SOURCES=$(wildcard *.cpp)
+OBJECTS=$(SOURCES:.cpp=.o)
 
-modern: $(OBJ)
-	$(CC) $(OBJ) $(STD) -o $@
+modern: $(OBJECTS)
+	$(CXX) $(OBJECTS) $(STD) -o $@
 
 main.o: main.cpp Square.hpp Shape.hpp Rectangle.hpp
-	$(CC) $< $(STD) -o $@ $(CFLAGS)
+	$(CXX) $< $(STD) -o $@ $(CXXFLAGS)
 
 square.o: Square.cpp Square.hpp
-	$(CC) $< $(STD) -o $@ $(CFLAGS)
+	$(CXX) $< $(STD) -o $@ $(CFXXLAGS)
 
 shape.o: Shape.cpp Shape.hpp
-	$(CC) $< $(STD) -o $@ $(CFLAGS)
+	$(CXX) $< $(STD) -o $@ $(CXXFLAGS)
 
 rectangle.o: Rectangle.cpp Rectangle.hpp
-	$(CC) $< $(STD) -o $@ $(CFLAGS)
+	$(CXX) $< $(STD) -o $@ $(CXXFLAGS)
 
 circle.o: Circle.cpp Circle.hpp
-	$(CC) $< $(STD) -o $@ $(CFLAGS)
+	$(CXX) $< $(STD) -o $@ $(CXXFLAGS)
 
+.PHONY : clean
 clean:
-	rm *.o modern
+	rm modern $(OBJECTS)
