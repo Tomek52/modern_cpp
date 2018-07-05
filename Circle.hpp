@@ -16,5 +16,5 @@ public:
 private:
     Circle(); // doesn't allow to call default constructor
 
-    double r_ 
+    double r_;
 };
