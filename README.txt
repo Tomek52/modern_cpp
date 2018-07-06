@@ -1,3 +1,6 @@
+CricleCI
+[![Build Status](https://circleci.com/gh/:owner/:repo.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/Tomek52/modern_cpp)
+
 0. Compile and run the project
     > mkdir build
     > cd build
