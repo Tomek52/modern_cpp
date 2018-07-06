@@ -1,3 +1,7 @@
+CricleCI
+[![CircleCI](https://circleci.com/gh/Tomek52/modern_cpp/tree/master.svg?style=svg)](https://circleci.com/gh/Tomek52/modern_cpp/tree/master)
+
+
 0. Compile and run the project
     > mkdir build
     > cd build
